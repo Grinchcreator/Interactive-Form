@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+<link rel="stylesheet" href="style.css">
+
+<title>Frontend Mentor | Interactive card details form</title>
+
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap');
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+</style>
+
+</head>
+
+
+<body>
+
+<main class="main">
+  <div class="container">
+  <div class="gradient">
+  <div class="cards">
+
+    <div class="card_front">
+      <svg class="logo" width="84" height="47" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="23.478" cy="23.5" rx="23.478" ry="23.5" fill="#fff"/><path d="M83.5 23.5c0 5.565-4.507 10.075-10.065 10.075-5.559 0-10.065-4.51-10.065-10.075 0-5.565 4.506-10.075 10.065-10.075 5.558 0 10.065 4.51 10.065 10.075Z" stroke="#fff"/></svg>
+      
+      <div class="card_container">
+      <img src="./images/bg-card-front.png" alt="card-front" width="400px"/>
+      <h1 id="front_number">0000 0000 0000 0000</h1>
+
+      <div class="card_info">
+      <span id="front_name">Jane Appleseed</span>
+
+      <span id="date">
+      <span id="front_month">00</span>/<span id="front_year">00</span>
+      </span>
+      </div>
+      </div>
+   </div>
+
+     <div class="card_back">
+     <img src="./images/bg-card-back.png" alt="card-back" width="400px"/>
+     <span id="back_cvc">000</span>
+     </div>
+    </div>
+  </div>
+  </div>
+
+<div class="input-wrapper">
+ <div class="input-wrapper1" id="input-wrapper1">
+
+ <p>Cardholder Name</p>
+ <input required type="text" value="e.g Jane Appleseed" id="card_name" class="form-input1" maxlength="20"
+ pattern="^[a-zA-Z]+ [a-zA-Z]+$"
+ > 
+ <span class="error_Name"></span>
+ 
+ <p>Card Number</p>
+ <input required type="text" inputmode="numeric" pattern="[0-9]{4}[0-9]{4}[0-9]{4}[0-9]{4}" 
+ value="e.g. 1234 5678 9123 0000" id="card_number" class="form-input1"
+ minlength="16"
+ maxlength="16">
+ <span class="error_Number"></span>
+ <p>Exp. Date (MM/YY)&nbsp&nbsp&nbsp&nbsp CVC</p>
+ </div>
+  
+ <div class="input-wrapper2">
+   <div class="month">
+ <input required type="text" value="MM" id="card_month" 
+ class="form-input2" pattern="[0-9]{2}" inputmode="numeric"
+ minlength="2"
+ maxlength="2">
+ <span class="error_Month"></span>
+   </div>
+
+   <div class="year">
+ <input required type="text" value="YY" id="card_year" 
+ class="form-input2" pattern="[0-9]{2}" inputmode="numeric"
+ minlength="2"
+ maxlength="2">
+ <span class="error_Year"></span>
+   </div>
+
+   <div class="cvc">
+ <input required type="text" 
+ value="e.g. 123" id="card_cvc" class="form-input3" 
+ pattern="[0-9]{3}" 
+ minlength="3"
+ maxlength="3"
+ inputmode="numeric">
+ <span class="error_CVC"></span>
+   </div>
+ 
+ </div>
+
+ <input type="submit" id="submit" class="button" value="Confirm">
+ 
+
+
+
+<div class="thank_you">
+<svg width="80" height="80" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="40" r="40" fill="url(#a)"/><path d="M28 39.92 36.08 48l16-16" stroke="#fff" stroke-width="3"/><defs><linearGradient id="a" x1="-23.014" y1="11.507" x2="0" y2="91.507" gradientUnits="userSpaceOnUse"><stop stop-color="#6348FE"/><stop offset="1" stop-color="#610595"/></linearGradient></defs></svg>
+<h1>Thank you!</h1>
+<p>We've added your card details</p>
+<button>Continue</button> 
+</div>
+
+</div>
+</main>
+
+<!-- Completed state start 
+<div class="attribution">
+Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+Coded by <a href="#">Grinchcreator</a>.
+</div>-->
+
+<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
